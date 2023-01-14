@@ -1,0 +1,26 @@
+{
+  "name": "chart",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "deploy": "export AWS_PROFILE=vbalasu_admin && aws s3 cp --recursive dist s3://cloudmatica/chart-js --acl public-read",
+    "view": "open https://cloudmatica.s3.us-east-1.amazonaws.com/chart-js/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "targets": {
+    "default": {
+      "publicUrl": "."
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.1.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.2"
+  }
+}
